@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>Form validation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="signup-form">
+      <h2>Register</h2>
+      <div class="field">
+        <label for="">Email</label>
+        <input
+          type="email"
+          class="textfield"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+
+      <div class="field">
+        <label for=""
+          >Password<span class="example">(at least 8 characters)</span></label
+        >
+        <input
+          type="password"
+          minlength="8"
+          class="textfield"
+          placeholder="Enter your password"
+          required
+          name="password"
+        />
+      </div>
+
+      <div class="field">
+        <label for=""
+          >Phone number <span class="example">(4 to 12 digits)</span></label
+        >
+        <input
+          type="tel"
+          class="textfield"
+          placeholder="Phone number"
+          required
+          pattern="[0-9]{4,15}"
+        />
+      </div>
+
+      <button type="submit" id="register-button" class="btn">Sign up</button>
+    </form>
+  </body>
+  <script src="index.js"></script>
+</html>
